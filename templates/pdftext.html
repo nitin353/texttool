@@ -1,0 +1,31 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}">
+</head>
+<body>
+	<div class="row   pt-5 pb-5" style="background-image: url({%static 'images/back1.jpg' %}); background-size: cover;">
+		
+		
+		<div class="col-3  pt-5 pb-5" ></div>
+			<div class="col-6 p-5  mt-5 mb-5  " style="">
+				<h1 style="text-align:center;">text to image</h1><br>
+				<center><img style="height:200px;width:200px; " src="{%static 'images\img7.jpg' %}"></center>
+				<form method="POST" action="" enctype="multipart/from-data">
+					{% csrf_token %}
+					<p>{{succ}}</p>
+					
+					
+
+<input type="file" name="file1">
+
+  	 
+
+<div class="d-grid gap-2"><br>
+  <button class="btn btn-dark btn-lg" type="submit">Upload your PDF</button>
+</div>
+				</form>
+{%endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="container" style="">
+	<div class="row">
+		{% for i in data %}
+
+
+
+
+		<div class="col-md-4 mt-5">
+			<div class="card shadow" style="width: 22rem;">
+				<img src="{{i.image.url}}" class="card-img-top" alt="images" height="210px">
+				<div class="card-body">
+					<h5 class="card-title">{{i.title|truncatechars:60}}</h5>
+					<p class="card-text">{{i.description|truncatechars:100}}</p>
+					<a href="{% url 'detailblog' id=i.id %}" class="btn btn-primary">view more</a>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	</div>
+<br>
+	{% endblock %}
+
+
+	

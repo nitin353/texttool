@@ -1,0 +1,235 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" type="text/css"href="{%static 'css/bootstrap.min.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+</head>
+<body >
+  
+
+
+	<div class="container   pt-5 pb-5" >
+
+		<div class="row">
+		
+		<div class="col-12 pt-5  pb-5" style=" border-radius:40px" >
+			<h1 style="text-align: center;">T O O L S</h1>
+		
+			<div class="row">
+			<div class="col-md-4 pt-5 pb-5">
+			<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-audio icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Text To Speech </h5>
+    <p class="card-text">Text to speech(TTS) is a technology that converts text into voices.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+     <a href="{% url 'texttospeech' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+
+
+
+	<div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-fountain-pen icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Spelling Checker</h5>
+    <p class="card-text">A standard english spelling-checker is a tool that searches a document or website for misspellings and suggests fixes.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'spellcheck' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+	<div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-text icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Text Converter</h5>
+    <p class="card-text">TEXT converter converts text to other encodings or other formats.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'textconvert' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-listing-number icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Count</h5>
+    <p class="card-text">Word Counter is an  tool for counting words, characters, sentences, paragraphs and pages in real time, along with spelling and grammar checking..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'wordcount' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+
+	<div class="col-md-4 pt-5 pb-5">
+		<div class="card shadow" style="width: 22rem;">
+			<div class="card-body text-center"><i class="icofont-email icofont-3x text-warning"></i><br/>
+				<h5 class="card-title">Email Extraction</h5>
+				<p class="card-text">Email Extractor is a web based software that helps you extract emails from the bulk of text. .</p>
+				<div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'email' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+
+
+	<div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-attachment icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">URL Extraction</h5>
+    <p class="card-text">This tool extracts all URLs from your text. If you want to remove duplicate URLs, please use our Remove Duplicate Lines tool..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'url' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-spinner-alt-1 icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Synonyms</h5>
+    <p class="card-text">Synonyms used to make your text easier to read. Some of the benefits of using synonyms are as follows: Makes text more captivating. Helps avoid monotone in speaking and writing..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'syn' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+	<div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-spinner-alt-4 icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Antonyms</h5>
+    <p class="card-text">An antonym is a word that means the opposite of another word. For example, hot and cold are antonyms, as are good and bad..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'ant' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-parrot-lip icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">SENTIMENTAL ANALAYSIS</h5>
+    <p class="card-text">Sentiment analysis is the process of analyzing digital text to determine if the emotional tone of the message is positive, negative, or neutral..</p>
+    
+   <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'sentimental' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-qr-code icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">QR genrator</h5>
+    <p class="card-text">A QR code is a type of barcode that can be read easily by a digital device and which stores information as a series of pixels in a square-shaped grid. .</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'qr' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-barcode icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">BARCODE</h5>
+    <p class="card-text"> This free service can be used to generate individual barcodes or called via URL's to include inline PNG or JPEG images directly into your documents.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'barcode' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-image icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Image To Text</h5>
+    <p class="card-text">Image to text models output a text from a given image. Image captioning or optical character recognition can be considered as the most common applications of image to text..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'img' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-spreadsheet icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Text Translator</h5>
+    <p class="card-text"> This tool is used for translate PDF file to  Translator, select the desired output language, and let the tool do the rest.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'text' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-text icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">text To image</h5>
+    <p class="card-text">Text to image tool, allows you to take text prompts and turn them into matching images. Enter text prompts like " a garfield princess", transform your creative ideas into stunning images with just a few clicks..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'image' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div> 
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-angry-monster icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Cyber Bully</h5>
+    <p class="card-text">Cyberbullying is known as the use of electronic communication to bully a person, typically by the internet or by sending text messages that are usually of an intimidating or threatening nature.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'cyberbully' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+{%endblock %}

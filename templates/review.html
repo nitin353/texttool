@@ -1,0 +1,35 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}">
+</head>
+<body>
+	<div class="row   pt-5 pb-5"  >
+		
+		<div class="col-4  pt-5 pb-5" ></div>
+			<div class="col-4 p-5  mt-5 mb-5  bg-warning" style="">
+				<h1>Review</h1>
+				<form method="POST" action="">
+					{% csrf_token %}
+					<p>{{succ}}</p>
+					<h2>review</h2>
+					<label>Tittle</label>
+								<div class="input-group flex-nowrap">
+					
+  <span class="input-group-text" id="addon-wrapping">  <i class="icofont-match-review"></i> </span>
+  <input type="text" class="form-control" placeholder="Tittle" aria-label="Username"  name="Tittle" aria-describedby="addon-wrapping">
+</div><br/>
+<label>Message</label>
+<div class="mb-3">
+  <textarea class="form-control" placeholder="write your message box" name="msg" rows="6"></textarea><br/>
+  <div class="d-grid gap-2 col-6 mx-auto">
+  	 <button class="btn btn-dark btn-lg" type="submit">Submit</button>
+  	</div>
+
+
+
+				</form>
+				{%endblock %}

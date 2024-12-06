@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" type="text/css"href="{%static 'css/bootstrap.min.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+</head>
+<body >
+  
+
+
+  <div class="container   pt-5 pb-5" >
+
+    <div class="row">
+    
+    <div class="col-12 pt-5  pb-5" style=" border-radius:40px" >
+      <h1 style="text-align: center;">T O O L S</h1>
+    
+      <div class="row">
+      <div class="col-md-4 pt-5 pb-5">
+      <div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-audio icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Text To Speech </h5>
+    <p class="card-text">Text to speech(TTS) is a technology that converts text into voices.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+     <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+
+
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-fountain-pen icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Spelling Checker</h5>
+    <p class="card-text">A standard english spelling-checker is a tool that searches a document or website for misspellings and suggests fixes.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'spellcheck' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-text icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Text Converter</h5>
+    <p class="card-text">TEXT converter converts text to other encodings or other formats.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-listing-number icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Count</h5>
+    <p class="card-text">Word Counter is an  tool for counting words, characters, sentences, paragraphs and pages in real time, along with spelling and grammar checking..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'wordcount' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+
+  <div class="col-md-4 pt-5 pb-5">
+    <div class="card shadow" style="width: 22rem;">
+      <div class="card-body text-center"><i class="icofont-email icofont-3x text-warning"></i><br/>
+        <h5 class="card-title">Email Extraction</h5>
+        <p class="card-text">Email Extractor is a web based software that helps you extract emails from the bulk of text. .</p>
+        <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'email' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-attachment icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">URL Extraction</h5>
+    <p class="card-text">This tool extracts all URLs from your text. If you want to remove duplicate URLs, please use our Remove Duplicate Lines tool..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-spinner-alt-1 icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Synonyms</h5>
+    <p class="card-text">Synonyms used to make your text easier to read. Some of the benefits of using synonyms are as follows: Makes text more captivating. Helps avoid monotone in speaking and writing..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'syn' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-spinner-alt-4 icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Antonyms</h5>
+    <p class="card-text">An antonym is a word that means the opposite of another word. For example, hot and cold are antonyms, as are good and bad..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-brand-wordpress icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Word to PDF</h5>
+    <p class="card-text">This Word to PDF tool allows you to convert your MS Word file into PDF. Convert your Doc file online, free and easily into PDF, without any installation..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-powerpoint icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">PowerPoint To PDF</h5>
+    <p class="card-text">This tool reduces your file size by as much as one-third, making it easier to share and email your file with your colleagues, bosses, and clients..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-excel icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">EXEL To PDF</h5>
+    <p class="card-text"> Excel to PDF converter tool lets you convert Microsoft Excel files entirely online, without needing to download any software onto your local device. You can use the online tool in any web browser and on any operating system.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-image icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">Image To PDF</h5>
+    <p class="card-text">This tool is used to  convert JPEG, PNG, BMP, GIF and TIFF files into PDF documents using the Acrobat online tool..</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'img' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-spreadsheet icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">PDF To Translator</h5>
+    <p class="card-text"> This tool is used for translate PDF file to  Translator, select the desired output language, and let the tool do the rest.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-file-text icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">PDF To Text</h5>
+    <p class="card-text">This tool is used to convert PDFs to text files regardless of your operating system, as our cloud platform works directly within your internet browser.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div> 
+</div>
+</div>
+
+  <div class="col-md-4 pt-5 pb-5">
+<div class="card shadow" style="width: 22rem;">
+  <div class="card-body text-center"><i class="icofont-qr-code icofont-3x text-warning"></i><br/>
+    <h5 class="card-title">QR Genrator</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <a href="{% url 'login' %}" class="btn btn-dark btn-lg" type="submit">Try Now </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+{%endblock %}

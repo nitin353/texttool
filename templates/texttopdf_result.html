@@ -1,0 +1,37 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<head>
+<html>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}" >
+</head>
+<body>
+	
+				<div class="row   pt-5 pb-5" style="background-image: url({%static 'images/back1.jpg' %}); background-size: cover; height:700px">
+
+
+						<div class="col-3  pt-5 pb-5" ></div>
+			<div class="col-6 p-5   mb-5  " style="">
+				<h1 style="text-align:center;">Text to PDF </h1><br>
+				
+					
+					
+						{% if k %}
+
+<div class="d-grid gap-2"><br>
+  <a href={%static 'mygfg.pdf' %}  style="color: white;" class="btn btn-dark btn-lg" target="_blank"> open pdf </a>
+<br><br><br><br>
+		
+						
+					 
+					
+						<center><a href={%static 'mygfg.pdf' %} download="" style="text-decoration: none;"><i class="icofont-cloud-download icofont-3x" style="color:black;">Download Now
+						</i></a></center>
+						{% endif %}
+					</div>
+					
+				</div>
+			</div>
+		
+	{% endblock %}

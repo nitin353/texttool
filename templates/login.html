@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+<html>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}" >
+</head>
+<body>
+	<div class="row   pt-5 pb-5" style="background-image: url({%static 'images/back1.jpg' %}); background-size: cover;">
+		
+		<div class="col-6  pt-5 pb-5" ></div>
+			<div class="col-5 p-5  mt-5 mb-5 shadow" style="">
+			
+
+		<form method="POST" action="">
+				{% csrf_token %}
+				<p>{{succ}}</p>
+				{{msg}}
+			<center><h2>Login</h2></center><br/>
+			
+			<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping">  <i class="icofont-ui-message"></i> </span>
+  <input type="text" class="form-control" required placeholder="Enter Email " name="em" aria-label="Username" aria-describedby="addon-wrapping">
+</div><br/>
+		<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping"><i class="icofont-ui-password "></i></span>
+  <input type="password" class="form-control" required placeholder="Enter Password" name="pw" aria-label="Username" aria-describedby="addon-wrapping">
+</div><br/>
+
+
+ <a href="{% url 'forget' %}" class="text-decoration-none text-dark"><b>FORGET PASSWORD</b> </a>
+  
+ <br>
+ <br>
+ 
+		
+ <div class="d-grid gap-2 col-6 mx-auto">
+
+ <button href="#" class="btn btn-dark btn-lg" type="submit">LOGIN </button>
+  </div><br>
+  <center><a href="{% url 'register' %}" class="text-decoration-none text-dark"><b>Not a member?</b>Sign up now </a></center>
+									
+					
+
+  </form>
+
+</div></div>
+
+</body>
+</html>
+{%endblock %}
+
+
+

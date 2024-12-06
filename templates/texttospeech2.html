@@ -1,0 +1,80 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont/icofont.min.css'%}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css">
+<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row" style="background-image: url({%static 'images/back1.jpg' %}); background-size: cover; height: 700px;">
+		
+		
+		<div class="col-4  pt-5 pb-5" ></div>
+			<div class="col-6 p-5  mt-5 mb-5  " style="">
+				<h1 style="text-align:center;">TEXT TO SPEECH</h1><br>
+					<form method="POST" action="{% url 'speechlangtrans' %}">
+						{% csrf_token %} 
+						<label >Your Text</label>
+						<textarea name="msg" class="form-control" rows="5" readonly>{{text}}</textarea><br>
+						<div class="row">
+							<div class="col-9">
+						
+                          <select  class="form-select" name="Languages" id="a1">
+                          	
+                            <option value=""  HIDDEN/>SELECT lANGUAGE</option>
+                            <option value="es" />Spanish</option>
+                            <option value="fr" />French</option>
+                            <option value="ko" />korean</option>
+                            <option value="de" />German</option>
+                            <option value="en" />english</option>
+                            <option value="zh-CN" /> chinese</option>
+                          </select>
+                          
+                        
+						</div>
+						<div class="col-3">
+						<button type="submit" class="btn btn-danger rounded-0"  >Translate</button></div>
+						</div>
+					</form>
+					<br/><br/>
+  
+					<div style="text-center"class="row">
+						<div class="col-9">
+					<audio controls >
+  <source src={%static 'welcome.mp3' %} type="audio/mpeg" >
+  Your browser does not support the audio tag.
+</audio> 
+</div>
+<div class="col-3">
+<a href={%static 'welcome.mp3' %} download="" ><i class="icofont-download icofont-3x text-danger" ></i></a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('option').click(function(){
+    res=$(this).html();
+    alert(res)
+  });
+});
+</script>
+
+</body>
+</html>

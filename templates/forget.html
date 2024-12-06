@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+</head>
+<body>
+	<div class="row   pt-5 pb-5" style="background-image: url({%static 'images/back1.jpg' %}); background-size: cover;">
+		
+		<div class="col-6  pt-5 pb-5" ></div>
+			<div class="col-5 p-5  mt-5 mb-5 shadow" style="">
+			
+
+		<form method="POST" action="">
+			{% csrf_token %}
+			<h3 class="text-danger">{{res}}</h3>
+			<h3 class="text-success">{{rest}}</h3>
+			
+			<center><h2>Forget Password</h2></center><br/>
+			
+			<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping">  <i class="icofont-ui-message"></i> </span>
+  <input type="text" class="form-control" placeholder="Email " aria-label="Username" aria-describedby="addon-wrapping" name="em">
+</div><br/>
+		
+		
+<center> <button type="submit" class="btn btn-dark btn-lg ps-5 pe-5 rounded-pill">GET PASSWORD</button></center>
+									
+					
+
+  </form>
+</div></div>
+
+
+
+</body>
+</html>
+{%endblock %}
+
+
+

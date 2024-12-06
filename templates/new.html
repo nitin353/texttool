@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			{% for i in data %}
+			<details class="border p-2 mt-3  bg-warning  rounded">
+				<summary class="text-dark  fs-4">{{i.Ques}}</summary>
+				<p class="border-top p-3">{{i.Ans}}</p>
+
+			</details>
+			{% endfor%}
+		</div>
+	</div>
+</div>
+<br>
+
+{%endblock %}
+
+
+
+
+
+
+

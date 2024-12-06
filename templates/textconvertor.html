@@ -1,0 +1,30 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}">
+</head>
+<body>
+	<div class="row   pt-5 pb-5" style="background-image: url({%static 'images/back1.jpg' %}); background-size: cover;">
+		
+		
+		<div class="col-3  pt-5 pb-5" ></div>
+			<div class="col-6 p-5   mb-5  " style="">
+				<h1 style="text-align:center;">Text to PDF </h1><br>
+				<center><img style="height:200px;width:200px; " src="{%static 'images\img14.jpg' %}"></center>
+				<form method="POST" action="">
+					{% csrf_token %}
+					<p>{{succ}}</p>
+					
+					
+<label>Enter Yout text</label><br>
+<textarea class="form-control" name="msg" rows="4"></textarea>
+  	 
+
+<div class="d-grid gap-2"><br>
+  <button class="btn btn-dark btn-lg" type="submit">convert</button>
+</div>
+				</form>
+{%endblock %}

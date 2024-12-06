@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<div class="container-fluid p-3 bg-light">
+	<div class="row">
+		{% for i in k %}
+
+		<div class="col-md-4">
+			<div class="card mt-4 border shadow">
+				<img src="{{i.urlToImage}}"alt= "" height="280px" width="100px" class=" 
+				card-img-top">
+				<div class="card-body border  shadow">
+					<h5 class="card-title" title="{{i.title}}" style="color:#4a28a9;">
+					{{i.title|truncatechars:30}}</h5>
+					<p class="card-text">{{i.content|truncatechars:150}}</p>
+					<a href="{{i.url}}" target="_blank" class="btn btn-dark btn-lg"><b> click here</b></a>
+				</div>
+			</div>
+		</div>
+		
+		{% endfor %}
+	</div>
+</div>
+</div>
+{%endblock %}
+
+
+	

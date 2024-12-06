@@ -1,0 +1,71 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}">
+<style type="text/css">
+	a{text-decoration: none;}
+</style>
+</head>
+<body>
+	<div class="row    pb-5"  >
+		
+		<div class="col-3  pt-5 pb-5" ></div>
+			<div class="col-6 p-5  mt-5 mb-5  bg-warning" style="">
+			
+
+		<form method="POST" action="">
+			{% csrf_token %}
+			<p>{{succ}}</p>
+			{{msg}}
+			<center><h2>PROFILE</h2></center><br/>
+
+			<label>name</label>
+			
+			<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping">  <i class="icofont-user"></i> </span>
+  <input type="text" class="form-control" required placeholder="your Name" name="nm" value="{{user.name}}"  aria-label="Username" aria-describedby="addon-wrapping">
+</div><br/>
+<label>AGE</label>
+		<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping"><i class="icofont-male "></i></span>
+  <input type="number" class="form-control" required placeholder="age" name="age" value="{{user.AGE}}"  aria-label="Username" aria-describedby="addon-wrapping">
+</div><br/>
+<label>DOB</label>
+		<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping"><i class="icofont-brand-steam"></i></span>
+  <input type="date" class="form-control" required placeholder="D-O-B" name="dob" value="{{user.DOB}}" aria-label="Username" aria-describedby="addon-wrapping">
+</div><br/>
+<label>CONTACT-NO</label>
+		<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping"><i class="icofont-ui-call"></i></span>
+  <input type="text" class="form-control" required placeholder="CONTACT-NUMBER" name="cn" value="{{user.CONTACT}}" aria-label="Username" aria-describedby="addon-wrapping">
+</div><br/>
+
+<label>GENDER</label>
+		<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping"><i class="icofont-user-alt-6"></i></span>
+  <input type="text" class="form-control" required placeholder="gender" name="gen" value="{{user.GENDER}}"  aria-label="Username" aria-describedby="addon-wrapping">
+</div><br/>
+<label>ADDRESS</label>
+		<div class="form-floating">
+  <textarea class="form-control" required placeholder="address" name="ad" id="floatingTextarea">{{user.ADDRESS}}"</textarea>
+  <label for="floatingTextarea"></label>
+</div><br>
+
+
+
+
+
+<center> <button type="submit" class="btn btn-dark btn-lg ps-5 pe-5 rounded-pill">CHANGE</button></center>
+									
+					
+
+  </form>
+</div>
+</div>
+</body>
+</html>
+{%endblock %}

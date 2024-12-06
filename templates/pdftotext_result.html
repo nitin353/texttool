@@ -1,0 +1,45 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+				</div>
+				<div class="col-6   p-5  mt-5"style="box-shadow:0px 0px 30px #552f4f; background-color: transparent;">
+					<h3 class="text-center" style="color:#552f4f;font-family: 'Aclonica', sans-serif ; color:#552f4f;">Pdf to Text</h3><hr/>
+					<h6 style= "color:#552f4f;">File Upladed : {{fname}} <br>
+					Total No of pages: {{n}} <br>
+					Select pageno to convert</h6> 
+					<form method="POST" action={% url 'pdftotextvalue' %} >
+						{% csrf_token %} 
+						<input type="hidden" name="fname" value={{fname}} >
+						<input type="hidden" name="n" value={{n}} >
+
+						<input type="number" name="pageno" min=1 max={{n}}  class="form-control"> <br>
+						<button type="submit" class="btn text-light form-control" style="background-color:#552f4f">Result<i class="icofont-file-pdf icofont-2x"></i></button><br>
+						<br><label style="color:#552f4f"> Your Text</label>
+						<textarea name="msg" class="form-control" rows="20" readonly>{{k}}</textarea>
+					</form>
+					<br>
+					{% if k %}
+						<audio controls >
+  <source src={%static 'pdfread.mp3' %} type="audio/mpeg" >
+  Your browser does not support the audio tag.
+</audio> 
+
+					<a href={% static 'pdfread.mp3' %} download> Download Page No:  {{n}} Audio </a>
+					
+					{% endif %}
+				</div>
+				<div class="col-3">
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+</body>
+</html>
+{% endblock %}

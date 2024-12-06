@@ -1,0 +1,26 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+<head>
+<html>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}" >
+</head>
+<body>
+	<div class="row   pt-5 pb-5" style="background-image: url({%static 'images/back1.jpg' %}); background-size: cover; height:700px">
+
+		<div class="col-3  pt-5 pb-5" ></div>
+			<div class="col-6 p-5   mb-5  " style="">
+				<h1 style="text-align:center;">SYNONYMS</h1><br>
+
+<center><h4>{{synonyms}}</h4></center>
+
+			
+					
+				</div>
+				<div class="col-3">
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
